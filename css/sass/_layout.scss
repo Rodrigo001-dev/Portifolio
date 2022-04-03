@@ -18,3 +18,17 @@
     display: none;
   }
 }
+
+// CONTAINER
+
+.container {
+  // limitando para um container fixo para ficar melhor para trabalhar com
+  // várias telas
+  max-width: 1220px;
+
+  margin: 0 auto;
+
+  border: 1px solid green;
+
+  padding: 24px 16px;
+}
