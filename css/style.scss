@@ -10,7 +10,11 @@
 body {
   width: 100%;
 
-  background-color: #050607;
+  background-color: $black-dark;
+}
+
+.border {
+  border: 1px solid red;
 }
 
 @import './sass/spacing';
