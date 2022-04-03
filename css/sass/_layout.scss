@@ -8,3 +8,13 @@
 
   padding: 48px 16px;
 }
+
+@media screen and (max-width: 1200px) {
+  .menu-left {
+    display: none;
+  }
+
+  .menu-right {
+    display: none;
+  }
+}
