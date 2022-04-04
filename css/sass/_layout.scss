@@ -31,4 +31,44 @@
   border: 1px solid green;
 
   padding: 24px 16px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  // altura de 90% "da tela"
+  height: 90vh;
+}
+
+@media screen and (max-width: 1200px) {
+  .hero {
+    height: auto;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+}
+
+// nth-child é para escolhar a filha 
+.container-item:nth-child(1) {
+  // vai falar como os container-items(divs filhas) vão crecer grow=crecer
+  // flex-grow: 2; eu disse para essa filha crecer 2 vezes mais
+  flex-grow: 2;
+}
+
+.container-item:nth-child(2) {
+  // vai falar como os container-items(divs filhas) vão crecer grow=crecer
+  // // flex-grow: 1; eu disse para essa filha crecer 1 vez mais
+  flex-grow: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    max-width: 400px;
+  }
 }
