@@ -9,7 +9,7 @@
   padding: 48px 16px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 960px) {
   .menu-left {
     display: none;
   }
@@ -21,14 +21,22 @@
 
 // CONTAINER
 
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.relative {
+  position: relative;
+}
+
 .container {
   // limitando para um container fixo para ficar melhor para trabalhar com
   // várias telas
   max-width: 1220px;
 
   margin: 0 auto;
-
-  border: 1px solid green;
 
   padding: 24px 16px;
 
@@ -42,7 +50,7 @@
   height: 90vh;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 960px) {
   .hero {
     height: auto;
   }
@@ -56,7 +64,9 @@
 .container-item:nth-child(1) {
   // vai falar como os container-items(divs filhas) vão crecer grow=crecer
   // flex-grow: 2; eu disse para essa filha crecer 2 vezes mais
-  flex-grow: 2;
+  flex-grow: 3;
+
+  margin: 40px 0px;
 }
 
 .container-item:nth-child(2) {
@@ -68,7 +78,31 @@
   justify-content: center;
   align-items: center;
 
+  margin: 40px 0px;
+
   img {
     max-width: 400px;
   }
+}
+
+.bg-hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  overflow: hidden;
+  z-index: -1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 960px) {
+  .svg-hero {
+    transform: scale(2) rotate(25deg);
+  }  
 }
