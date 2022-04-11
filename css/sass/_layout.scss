@@ -106,3 +106,17 @@
     transform: scale(2) rotate(25deg);
   }  
 }
+
+@media screen and (max-width: 1200px) {
+  .svg-hero {
+    transform: scale(1.5) rotate(25deg);
+  }
+}
+
+// SELECTED WORKS
+
+.list {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
+}
