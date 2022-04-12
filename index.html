@@ -17,17 +17,17 @@
   <!-- HEADER -->
   <header class="menu">
     <div class="menu-left">
-      <a href="" class="link">Home</a>
-      <a href="" class="link">About</a>
+      <a href="" class="link menu-1">Home</a>
+      <a href="" class="link menu-2">About</a>
     </div>
 
     <div class="menu-logo">
-      <h5>Rodrigo.</h5>
+      <h5 class="menu-3">Rodrigo.</h5>
     </div>
 
     <div class="menu-right">
-      <a href="" class="link">Works</a>
-      <a href="" class="link">Get in touch</a>
+      <a href="" class="link menu-4">Works</a>
+      <a href="" class="link menu-5">Get in touch</a>
     </div>
   </header>
 
@@ -178,6 +178,48 @@
 
     <h3 class="mt-9 mask text-center">rodrigorael53@gmail.com</h3>
   </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js" integrity="sha512-6zTDRWNxo8vI6JZYDCwhrJpg5icK3P4HNnW3czsO5Scb3lAoPDam+/wF3eog4hxcl0h44d0XlIcFkuoSaWHQ2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/ScrollTrigger.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script>
+
+    // quando a arvore DOM de elementos estiver carregada, ai sim dispara as
+    // animações
+    document.addEventListener('DOMContentLoaded', () => {
+      var tl = gsap.timeline();
+
+      // from de onde o elemento vai sair
+      tl
+      .from(".menu-1", {
+        duration: 1,
+        y: 50,
+        opacity: 0,
+        delay: 0.5
+      })
+      from(".menu-2", {
+        duration: 1,
+        y: 50,
+        opacity: 0
+      }, "-=0.8")
+      from(".menu-3", {
+        duration: 1,
+        y: 50,
+        opacity: 0
+      }, "-=0.8")
+      from(".menu-4", {
+        duration: 1,
+        y: 50,
+        opacity: 0
+      }, "-=0.8")
+      from(".menu-5", {
+        duration: 1,
+        y: 50,
+        opacity: 0
+      }, "-=0.8")
+    });
+
+  </script>
 
 </body>
 </html>
