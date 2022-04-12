@@ -5,6 +5,10 @@
           box-sizing: border-box;
 }
 
+.color-gray {
+  color: #777;
+}
+
 h1, h2, h3, h4, h5, h6, p, a {
   font-family: 'Barlow Condensed', sans-serif;
   color: #F5F7F7;
@@ -117,8 +121,8 @@ h6 {
   z-index: -1;
   width: 120px;
   height: 120px;
-  -webkit-transform: translate(-5%, -22%) rotate(45deg);
-          transform: translate(-5%, -22%) rotate(45deg);
+  -webkit-transform: translate(0%, -15%) rotate(60deg);
+          transform: translate(0%, -15%) rotate(60deg);
   background: linear-gradient(225deg, #2DC7ED 0%, rgba(83, 139, 240, 0) 100%);
   border-radius: 4px;
   -webkit-transition: .5s ease;
@@ -126,8 +130,8 @@ h6 {
 }
 
 .square:hover::after {
-  -webkit-transform: translate(-5%, -22%) rotate(60deg);
-          transform: translate(-5%, -22%) rotate(60deg);
+  -webkit-transform: translate(0%, -15%) rotate(360deg);
+          transform: translate(0%, -15%) rotate(360deg);
 }
 
 body {
@@ -862,5 +866,59 @@ body {
     -webkit-transform: scale(2) rotate(25deg);
             transform: scale(2) rotate(25deg);
   }
+}
+
+@media screen and (max-width: 1200px) {
+  .svg-hero {
+    -webkit-transform: scale(1.5) rotate(25deg);
+            transform: scale(1.5) rotate(25deg);
+  }
+}
+
+.bb-gray {
+  width: 100%;
+  border-bottom: 1px solid #15171A;
+}
+
+.list-item {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.list-item a:hover + .img-project {
+  -webkit-transform: translate(-50%, -50%) translate3d(0, 0, 0);
+          transform: translate(-50%, -50%) translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+.img-project {
+  max-width: 720px;
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+  z-index: -1;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%) translate3d(-1000px, 0, 0) skewx(70deg);
+          transform: translate(-50%, -50%) translate3d(-1000px, 0, 0) skewx(70deg);
+}
+
+.get {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
 }
 /*# sourceMappingURL=style.css.map */
