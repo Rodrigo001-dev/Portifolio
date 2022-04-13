@@ -128,9 +128,17 @@
   <!-- CONTAINER -->
   <section class="container hero">
     <div class="container-item">
-      <h1>Rodrigo Rael</h1>
-      <h2 class="mask text-right mt-7">Creative Developer</h2>
-      <h2 class="mask">FullStack Developer</h2>
+      <div class="">
+        <h1>Rodrigo Rael</h1>
+      </div>
+      
+      <div class="">
+        <h2 class="mask text-right mt-7">Creative Developer</h2>
+      </div>
+      
+      <div class="">
+        <h2 class="mask">FullStack Developer</h2>
+      </div>
 
       <div class="flex-end pr-9">
         <a href="" class="square">WORKS</a>
@@ -195,27 +203,52 @@
         duration: 1,
         y: 50,
         opacity: 0,
-        delay: 0.5
+        delay: 0.5,
+        ease: "power3.out"
       })
-      from(".menu-2", {
+      .from(".menu-2", {
         duration: 1,
         y: 50,
-        opacity: 0
+        opacity: 0,
+        ease: "power3.out"
       }, "-=0.8")
-      from(".menu-3", {
+      .from(".menu-3", {
         duration: 1,
         y: 50,
-        opacity: 0
+        opacity: 0,
+        ease: "power3.out"
       }, "-=0.8")
-      from(".menu-4", {
+      .from(".menu-4", {
         duration: 1,
         y: 50,
-        opacity: 0
+        opacity: 0,
+        ease: "power3.out"
       }, "-=0.8")
-      from(".menu-5", {
+      .from(".menu-5", {
         duration: 1,
         y: 50,
-        opacity: 0
+        opacity: 0,
+        ease: "power3.out"
+      }, "-=0.8")
+      .from(".container-item div", {
+        duration: 1,
+        y: 300,
+        opacity: 0,
+        // colocar um espaço de tempo de animação entre cada div de 0.2 segundos
+        stagger: {each: 0.2},
+        ease: "power3.out"
+      }, "-=0.8")
+      .from(".container-item img", {
+        duration: 1,
+        y: 300,
+        opacity: 0,
+        ease: "power3.out"
+      }, "-=0.8")
+      .from(".bg-hero", {
+        duration: 1,
+        y: 300,
+        opacity: 0,
+        ease: "power3.out"
       }, "-=0.8")
     });
 
