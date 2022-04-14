@@ -131,8 +131,8 @@ h6 {
 }
 
 .square:hover::after {
-  -webkit-transform: translate(0%, -15%) rotate(360deg);
-          transform: translate(0%, -15%) rotate(360deg);
+  -webkit-transform: translate(0%, -15%) rotate(220deg);
+          transform: translate(0%, -15%) rotate(220deg);
 }
 
 body {
@@ -757,6 +757,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: fixed;
   padding: 48px 16px;
 }
 
@@ -801,7 +802,7 @@ body {
 }
 
 .hero {
-  height: 90vh;
+  height: 100vh;
 }
 
 @media screen and (max-width: 960px) {
@@ -820,6 +821,7 @@ body {
   -webkit-box-flex: 3;
       -ms-flex-positive: 3;
           flex-grow: 3;
+  max-width: 700px;
   margin: 40px 0px;
 }
 
@@ -841,6 +843,7 @@ body {
 
 .container-item:nth-child(2) img {
   max-width: 400px;
+  display: none;
 }
 
 .bg-hero {
@@ -873,6 +876,13 @@ body {
   .svg-hero {
     -webkit-transform: scale(1.5) rotate(25deg);
             transform: scale(1.5) rotate(25deg);
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .svg-hero {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
   }
 }
 
@@ -921,5 +931,113 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 16px 24px;
+}
+
+#square1 {
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  transform-box: fill-box;
+  -webkit-animation: rotate1 3s ease infinite alternate;
+          animation: rotate1 3s ease infinite alternate;
+}
+
+#square2 {
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  transform-box: fill-box;
+  -webkit-animation: rotate1 3s ease infinite alternate;
+          animation: rotate1 3s ease infinite alternate;
+}
+
+#square4 {
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  transform-box: fill-box;
+  -webkit-animation: rotate1 3s ease infinite alternate;
+          animation: rotate1 3s ease infinite alternate;
+}
+
+#square5 {
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  transform-box: fill-box;
+  -webkit-animation: rotate1 3s ease infinite alternate;
+          animation: rotate1 3s ease infinite alternate;
+}
+
+@-webkit-keyframes rotate1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(60deg);
+            transform: rotate(60deg);
+  }
+}
+
+@keyframes rotate1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(60deg);
+            transform: rotate(60deg);
+  }
+}
+
+#square3 {
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  transform-box: fill-box;
+  -webkit-animation: rotate3 2.5s ease infinite alternate;
+          animation: rotate3 2.5s ease infinite alternate;
+}
+
+#square6 {
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  transform-box: fill-box;
+  -webkit-animation: rotate3 2.5s ease infinite alternate;
+          animation: rotate3 2.5s ease infinite alternate;
+}
+
+#square7 {
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  transform-box: fill-box;
+  -webkit-animation: rotate3 2.5s ease infinite alternate;
+          animation: rotate3 2.5s ease infinite alternate;
+}
+
+#square8 {
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  transform-box: fill-box;
+  -webkit-animation: rotate3 2.5s ease infinite alternate;
+          animation: rotate3 2.5s ease infinite alternate;
+}
+
+@-webkit-keyframes rotate3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+}
+
+@keyframes rotate3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
 }
 /*# sourceMappingURL=style.css.map */

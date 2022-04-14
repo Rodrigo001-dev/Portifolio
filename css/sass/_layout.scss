@@ -5,6 +5,7 @@
 
   display: flex;
   justify-content: space-between;
+  position: fixed;
 
   padding: 48px 16px;
 }
@@ -46,8 +47,8 @@
 }
 
 .hero {
-  // altura de 90% "da tela"
-  height: 90vh;
+  // altura de 100% "da tela"
+  height: 100vh;
 }
 
 @media screen and (max-width: 960px) {
@@ -65,6 +66,7 @@
   // vai falar como os container-items(divs filhas) vão crecer grow=crecer
   // flex-grow: 2; eu disse para essa filha crecer 2 vezes mais
   flex-grow: 3;
+  max-width: 700px;
 
   margin: 40px 0px;
 }
@@ -82,6 +84,7 @@
 
   img {
     max-width: 400px;
+    display: none;
   }
 }
 
@@ -110,6 +113,12 @@
 @media screen and (max-width: 1200px) {
   .svg-hero {
     transform: scale(1.5) rotate(25deg);
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .svg-hero {
+    transform: scale(1.5);
   }
 }
 
@@ -163,4 +172,72 @@
 
   margin: 0 auto;
   padding: 16px 24px;
+}
+
+// ANIMATIONS
+
+#square1 {
+  transform-origin: center center;
+  transform-box: fill-box;
+  animation: rotate1 3s ease infinite alternate;
+}
+
+#square2 {
+  transform-origin: center center;
+  transform-box: fill-box;
+  animation: rotate1 3s ease infinite alternate;
+}
+
+#square4 {
+  transform-origin: center center;
+  transform-box: fill-box;
+  animation: rotate1 3s ease infinite alternate;
+}
+
+#square5 {
+  transform-origin: center center;
+  transform-box: fill-box;
+  animation: rotate1 3s ease infinite alternate;
+}
+
+@keyframes rotate1{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(60deg);
+  }
+}
+
+#square3 {
+  transform-origin: center center;
+  transform-box: fill-box;
+  animation: rotate3 2.5s ease infinite alternate;
+}
+
+#square6 {
+  transform-origin: center center;
+  transform-box: fill-box;
+  animation: rotate3 2.5s ease infinite alternate;
+}
+
+#square7 {
+  transform-origin: center center;
+  transform-box: fill-box;
+  animation: rotate3 2.5s ease infinite alternate;
+}
+
+#square8 {
+  transform-origin: center center;
+  transform-box: fill-box;
+  animation: rotate3 2.5s ease infinite alternate;
+}
+
+@keyframes rotate3{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(270deg);
+  }
 }
