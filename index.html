@@ -153,7 +153,7 @@
 
   <!-- SELECTED WORKS -->
 
-  <section class="list">
+  <section class="list" id="section-01">
     <div class="list-item">
       <h2>Selected Works</h2>
     </div>
@@ -181,7 +181,7 @@
     </div>
   </section>
 
-  <section class="get mt-9">
+  <section class="get mt-9" id="section-02">
     <h2>Get in touch</h2>
 
     <h3 class="mt-9 mask text-center">rodrigorael53@gmail.com</h3>
@@ -250,6 +250,34 @@
         opacity: 0,
         ease: "power3.out"
       }, "-=0.8")
+
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.from("#section-01 div", {
+        duration: 1,
+        y: 300,
+        opacity: 0,
+        stagger: {each: 0.2},
+        ease: "power3.out",
+        // dispare esse evento com base no scroll
+        scrollTrigger: {
+          // estabelecer as caracteristicas do scrollTrigger
+          trigger: "#section-01",
+        }
+      });
+
+      gsap.from("#section-02 div", {
+        duration: 1,
+        y: 300,
+        opacity: 0,
+        stagger: {each: 0.2},
+        ease: "power3.out",
+        // dispare esse evento com base no scroll
+        scrollTrigger: {
+          // estabelecer as caracteristicas do scrollTrigger
+          trigger: "#section-02",
+        }
+      });
     });
 
   </script>
